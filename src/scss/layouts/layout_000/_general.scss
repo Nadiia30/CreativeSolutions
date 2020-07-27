@@ -1,0 +1,260 @@
+html {
+  font-size: $baseFontSize;
+}
+
+body {
+  font-family: $baseFontFamily;
+  min-height: 100vh;
+}
+
+h1 {
+  font-weight: $mediumFontWeight;
+}
+
+.fluid-container {
+  &_header {
+    background: url(#{$imgPath}bg-header.jpg) no-repeat;
+    background-size: cover;
+  }
+  &_about {
+    background: $mainBgColor;
+    padding-top: 20px;
+  }
+}
+
+/** ------------------
+ * Navbar.
+ * ------------------------------------------------------- */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar a {
+  text-decoration: none;
+  color: $white;
+  transition: color 200ms ease-in;
+}
+
+.logo img {
+  display: block;
+  max-height: 3.5rem;
+}
+
+.menu {
+  display: none;
+}
+
+/** -------------------------------------------------------------
+ * Menu button.
+ * --------------------------------------------------------- */
+
+.menu-button {
+  display: inline-block;
+  transition: 0.3s ease-in-out;
+  width: 35px;
+  height: 24px;
+  position: relative;
+}
+
+.menu-button.in-overlay {
+  position: absolute;
+  top: 4rem;
+  right: 4rem;
+}
+
+.menu-button span {
+  position: absolute;
+  height: 4px;
+  border-radius: 10px;
+  width: 100%;
+  background-color: $white;
+  top: 0;
+  transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
+}
+
+.menu-button.active span {
+  background-color: $white;
+}
+
+.menu-button span:nth-child(1) {
+  top: 0;
+}
+
+.menu-button span:nth-child(2),
+.menu-button span:nth-child(3) {
+  top: 10px;
+}
+
+.menu-button span:nth-child(4) {
+  top: 20px;
+}
+
+.menu-button.active span:nth-child(1),
+.menu-button.active span:nth-child(4) {
+  opacity: 0;
+}
+
+.menu-button.active span:nth-child(2) {
+  transform: rotate(45deg);
+}
+
+.menu-button.active span:nth-child(3) {
+  transform: rotate(-45deg);
+}
+
+/** ---------------------------------------------------------
+ * Mobile menu
+ * --------------------------------------------------------- */
+/* Overlay navigation. */
+.overlay-navigation {
+  display: flex;
+  background-color: $mobileMenuOverlay;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s, height 0.3s;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay-navigation.visible {
+  opacity: 1;
+  visibility: visible;
+  height: 100%;
+}
+
+.menu-mobile {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  overflow: auto;
+}
+
+.menu-mobile__link {
+  color: $white;
+  display: block;
+  padding: 0.75rem 0;
+  text-decoration: none;
+  @include font($baseFontFamily, 1.2rem, 700);
+  text-transform: uppercase;
+}
+
+.container {
+  padding: $mobilePadding;
+}
+.header-content {
+  color: $white;
+  text-align: center;
+  &__title {
+    @include font($baseFontFamily, $h1FontSize, 700);
+    text-transform: uppercase;
+  }
+  &__description {
+    @include font($baseFontFamily, 1rem, 400);
+    font-style: italic;
+  }
+}
+
+// ======= about =========
+.about-left {
+  background: url(#{$imgPath}bg-about.jpg) no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  height: 400px;
+  @include flexColumn;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 70px 0;
+}
+.about-icon {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 50px;
+}
+.about-title {
+  margin: 0;
+  @include font($baseFontFamily, $h2FontSize, 400);
+  text-transform: uppercase;
+  color: $white;
+}
+.about-text {
+  color: $textColor;
+  @include font($baseFontFamily, rem(20px), 400);
+}
+.bold {
+  font-weight: 700;
+}
+.italic {
+  font-style: italic;
+}
+.about-button {
+  color: $textColor;
+  @include font($baseFontFamily, rem(20px), 400);
+  font-style: italic;
+  border: 1px solid $textColor;
+  padding: 15px 50px;
+}
+
+.our-services {
+  padding: 70px 0;
+  text-align: center;
+  background: url(#{$imgPath}bg-services.jpg) no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  height: 500px;
+  color: $textLightColor;
+  &__img {
+    margin-bottom: 35px;
+  }
+  &__title {
+    margin: 0;
+    @include font($baseFontFamily, $h2FontSize, 400);
+    text-transform: uppercase;
+    margin-bottom: 50px;
+  }
+}
+.cite {
+  margin: 0;
+  @include font($baseFontFamily, rem(18px), 300);
+  font-style: italic;
+  margin-bottom: 10px;
+}
+.author {
+  margin: 0;
+  @include font($baseFontFamily, rem(18px), 700);
+}
+.box-item {
+  padding: 50px 0;
+  text-align: center;
+  &__img {
+    margin-bottom: 30px;
+  }
+  &__title {
+    margin: 0;
+    @include font($baseFontFamily, $h3FontSize, 700);
+    color: $textColor;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+  &__text {
+    margin: 0;
+    @include font($baseFontFamily, rem(18px), 400);
+    color: $textColor;
+    font-style: italic;
+  }
+}
+.service-box section:nth-of-type(2n) {
+  background: $boxItem1Color;
+}
+.service-box section:nth-of-type(3) {
+  background: $mainBgColor;
+}
+.service-box section:nth-of-type(5) {
+  background: $mainBgColor;
+}

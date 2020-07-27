@@ -1,0 +1,25 @@
+//fonts
+@import "../../fonts/proximaNova.scss";
+$baseFontSize: 16px;
+$h1FontSize: 30px;
+$h2FontSize: 36px;
+$h3FontSize: 24px;
+$baseFontFamily: "ProximaNova";
+$mediumFontWeight: 400;
+
+$mobilePadding: (12px / $baseFontSize) * 1rem;
+$desktopPadding: 1rem;
+
+// Paths
+
+$imgPath: "../i/";
+
+// Colors
+$black: #000000;
+$white: #ffffff;
+$mobileMenuOverlay: #ac9ece;
+$menuLinkHover: #656468;
+$textColor: #665f60;
+$mainBgColor: #ebebeb;
+$textLightColor: #fefcfd;
+$boxItem1Color: #dbdbdb;

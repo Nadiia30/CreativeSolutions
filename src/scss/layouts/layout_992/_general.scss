@@ -1,0 +1,35 @@
+/** ------------------------------------------------
+ * Desktop menu.
+ * ------------------------------------------------------- */
+.navbar li:hover > a {
+  color: $menuLinkHover;
+  text-decoration: underline;
+}
+
+.menu {
+  display: block;
+}
+.menu-desktop {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-desktop__item {
+  position: relative;
+  display: inline-block;
+}
+
+.menu-desktop__link {
+  display: inline-block;
+  padding: 1rem 1.5rem;
+  @include font($baseFontFamily, 1rem, 700);
+  text-transform: uppercase;
+}
+
+.menu-button {
+  display: none;
+}
+.overlay-navigation {
+  display: none;
+}
