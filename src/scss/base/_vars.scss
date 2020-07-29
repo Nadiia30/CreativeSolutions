@@ -1,11 +1,12 @@
 //fonts
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400&display=swap");
 @import "../../fonts/proximaNova.scss";
 $baseFontSize: 16px;
-$h1FontSize: 30px;
+$h1FontSize: 70px;
 $h2FontSize: 36px;
 $h3FontSize: 24px;
-$baseFontFamily: "ProximaNova";
-$mediumFontWeight: 400;
+$proximaNovaFontFamily: "ProximaNova";
+$ptSansFontFamily: "PT Sans", sans-serif;
 
 $mobilePadding: (12px / $baseFontSize) * 1rem;
 $desktopPadding: 1rem;
@@ -23,3 +24,4 @@ $textColor: #665f60;
 $mainBgColor: #ebebeb;
 $textLightColor: #fefcfd;
 $boxItem1Color: #dbdbdb;
+$teamMemberColor: #9f9acf;

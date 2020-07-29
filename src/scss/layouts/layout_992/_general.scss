@@ -23,7 +23,7 @@
 .menu-desktop__link {
   display: inline-block;
   padding: 1rem 1.5rem;
-  @include font($baseFontFamily, 1rem, 700);
+  @include font($proximaNovaFontFamily, $h3FontSize, 700);
   text-transform: uppercase;
 }
 

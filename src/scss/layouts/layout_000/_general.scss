@@ -3,12 +3,8 @@ html {
 }
 
 body {
-  font-family: $baseFontFamily;
+  @include flexColumn;
   min-height: 100vh;
-}
-
-h1 {
-  font-weight: $mediumFontWeight;
 }
 
 .fluid-container {
@@ -20,13 +16,20 @@ h1 {
     background: $mainBgColor;
     padding-top: 20px;
   }
+  &_works {
+    background: url(#{$imgPath}bg-works.jpg) no-repeat;
+    background-size: cover;
+  }
+  &_team {
+    background: $mainBgColor;
+  }
 }
 
 /** ------------------
  * Navbar.
  * ------------------------------------------------------- */
 .navbar {
-  display: flex;
+  @include flexRow;
   justify-content: space-between;
   align-items: center;
 }
@@ -108,7 +111,7 @@ h1 {
  * --------------------------------------------------------- */
 /* Overlay navigation. */
 .overlay-navigation {
-  display: flex;
+  @include flexRow;
   background-color: $mobileMenuOverlay;
   text-align: center;
   position: fixed;
@@ -141,22 +144,32 @@ h1 {
   display: block;
   padding: 0.75rem 0;
   text-decoration: none;
-  @include font($baseFontFamily, 1.2rem, 700);
+  @include font($proximaNovaFontFamily, 1.2rem, 700);
   text-transform: uppercase;
 }
 
 .container {
   padding: $mobilePadding;
+  &_works {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: center;
+  }
+  &_team {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: center;
+  }
 }
 .header-content {
   color: $white;
   text-align: center;
   &__title {
-    @include font($baseFontFamily, $h1FontSize, 700);
+    @include font($proximaNovaFontFamily, 40px, 700);
     text-transform: uppercase;
   }
   &__description {
-    @include font($baseFontFamily, 1rem, 400);
+    @include font($ptSansFontFamily, 1rem, 400);
     font-style: italic;
   }
 }
@@ -179,13 +192,13 @@ h1 {
 }
 .about-title {
   margin: 0;
-  @include font($baseFontFamily, $h2FontSize, 400);
+  @include font($proximaNovaFontFamily, $h2FontSize, 400);
   text-transform: uppercase;
   color: $white;
 }
 .about-text {
   color: $textColor;
-  @include font($baseFontFamily, rem(20px), 400);
+  @include font($ptSansFontFamily, rem(20px), 400);
 }
 .bold {
   font-weight: 700;
@@ -193,16 +206,22 @@ h1 {
 .italic {
   font-style: italic;
 }
-.about-button {
+.button {
   color: $textColor;
-  @include font($baseFontFamily, rem(20px), 400);
+  @include font($ptSansFontFamily, rem(20px), 400);
   font-style: italic;
   border: 1px solid $textColor;
   padding: 15px 50px;
+  &_works {
+    color: $white;
+    border-color: $white;
+    margin-top: 40px;
+  }
 }
 
+// ======= services =====
 .our-services {
-  padding: 70px 0;
+  padding: 70px $mobilePadding;
   text-align: center;
   background: url(#{$imgPath}bg-services.jpg) no-repeat;
   background-size: cover;
@@ -214,37 +233,38 @@ h1 {
   }
   &__title {
     margin: 0;
-    @include font($baseFontFamily, $h2FontSize, 400);
+    @include font($proximaNovaFontFamily, $h2FontSize, 400);
     text-transform: uppercase;
     margin-bottom: 50px;
   }
 }
 .cite {
   margin: 0;
-  @include font($baseFontFamily, rem(18px), 300);
+  @include font($ptSansFontFamily, rem(18px), 400);
   font-style: italic;
   margin-bottom: 10px;
 }
 .author {
   margin: 0;
-  @include font($baseFontFamily, rem(18px), 700);
+  @include font($ptSansFontFamily, rem(18px), 700);
 }
+
 .box-item {
-  padding: 50px 0;
+  padding: 50px $mobilePadding;
   text-align: center;
   &__img {
     margin-bottom: 30px;
   }
   &__title {
     margin: 0;
-    @include font($baseFontFamily, $h3FontSize, 700);
+    @include font($ptSansFontFamily, $h3FontSize, 700);
     color: $textColor;
     text-transform: uppercase;
     margin-bottom: 20px;
   }
   &__text {
     margin: 0;
-    @include font($baseFontFamily, rem(18px), 400);
+    @include font($ptSansFontFamily, rem(18px), 400);
     color: $textColor;
     font-style: italic;
   }
@@ -257,4 +277,95 @@ h1 {
 }
 .service-box section:nth-of-type(5) {
   background: $mainBgColor;
+}
+
+// ====== works =====
+.works-img {
+  margin-bottom: 35px;
+}
+.works-title {
+  margin: 0;
+  @include font($proximaNovaFontFamily, $h2FontSize, 400);
+  color: $textLightColor;
+  text-transform: uppercase;
+  margin-bottom: 50px;
+}
+.slider-img {
+  width: 100%;
+}
+.dots-box {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  @include flexRow;
+  justify-content: center;
+}
+.dots-box li {
+  margin-right: 6px;
+  border-radius: 100%;
+  font-size: 0;
+  border: 1px solid $textLightColor;
+}
+.dots-box button {
+  background: transparent;
+  border: 0;
+  border-radius: 100%;
+  width: 8px;
+  height: 8px;
+  padding: 0;
+  @include flexRow;
+  justify-content: center;
+  align-items: center;
+}
+.dots-box button:focus {
+  outline: none;
+}
+.container_dots .slick-active {
+  background: $textLightColor;
+}
+
+//====== team ======
+
+.team-icon {
+  margin-bottom: 35px;
+}
+.team-title {
+  margin: 0;
+  @include font($proximaNovaFontFamily, $h2FontSize, 400);
+  color: $textColor;
+  text-transform: uppercase;
+  margin-bottom: 140px;
+}
+.member {
+  position: relative;
+  &__img {
+    position: absolute;
+    top: -110px;
+    left: 34px;
+    border: 10px solid $mainBgColor;
+    border-radius: 100%;
+    width: 220px;
+  }
+  &__info {
+    width: 290px;
+    padding-top: 150px;
+    background: $white;
+  }
+  &__name {
+    margin: 0;
+    color: $teamMemberColor;
+    @include font($proximaNovaFontFamily, $h3FontSize, 700);
+    text-transform: uppercase;
+    margin-bottom: 35px;
+  }
+  &__position {
+    margin: 0;
+    color: $textColor;
+    @include font($ptSansFontFamily, $h3FontSize, 400);
+    font-style: italic;
+    padding-bottom: 35px;
+  }
+}
+.social-box {
+  background: $teamMemberColor;
 }

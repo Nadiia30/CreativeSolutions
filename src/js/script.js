@@ -43,3 +43,13 @@ ssm.addStates([
     },
   },
 ]);
+
+$(".works-slider").slick({
+  autoplay: true,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  arrows: false,
+  dots: true,
+  appendDots: ".container_dots",
+  dotsClass: "dots-box",
+});
