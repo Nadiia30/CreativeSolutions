@@ -53,3 +53,31 @@ $(".works-slider").slick({
   appendDots: ".container_dots",
   dotsClass: "dots-box",
 });
+
+$(function () {
+  const config = {
+    autoplay: true,
+    speed: 1000,
+    slidesToShow: 1,
+    arrows: true,
+    prevArrow: "<div class='myarrow myarrow_prev'>Prev</div>",
+    nextArrow: "<div class='myarrow myarrow_next'>Next</div>",
+    mobileFirst: true,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 992,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 2,
+        },
+      },
+    ],
+  };
+  const sl = $(".team-slider").slick(config);
+});

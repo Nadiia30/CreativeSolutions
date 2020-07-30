@@ -334,10 +334,10 @@ body {
   @include font($proximaNovaFontFamily, $h2FontSize, 400);
   color: $textColor;
   text-transform: uppercase;
-  margin-bottom: 140px;
 }
 .member {
   position: relative;
+  margin-top: 140px;
   &__img {
     position: absolute;
     top: -110px;
@@ -367,5 +367,33 @@ body {
   }
 }
 .social-box {
+  width: 290px;
   background: $teamMemberColor;
+  padding: 15px;
+  @include e(icon) {
+    width: 30px;
+    height: 30px;
+    margin-right: 12px;
+    --icon-color: #ebebeb;
+    --text-color: #9f9acf;
+  }
+}
+.myarrow {
+  position: absolute;
+  top: 50%;
+  width: 22px;
+  height: 38px;
+  z-index: 10;
+  transition: all 1s ease-in;
+  background: url(#{$imgPath}arrow-left.png) no-repeat;
+  cursor: pointer;
+  text-indent: -9999px;
+}
+
+.myarrow_prev {
+  left: 0;
+}
+.myarrow_next {
+  right: 0px;
+  transform: rotate(180deg);
 }
