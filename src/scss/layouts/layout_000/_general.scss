@@ -335,9 +335,12 @@ body {
   color: $textColor;
   text-transform: uppercase;
 }
+
 .member {
   position: relative;
+  text-align: center;
   margin-top: 140px;
+
   &__img {
     position: absolute;
     top: -110px;
@@ -396,4 +399,83 @@ body {
 .myarrow_next {
   right: 0px;
   transform: rotate(180deg);
+}
+
+// ====== location ======
+
+.location {
+  text-align: center;
+  background: lightseagreen;
+}
+.location-icon {
+  padding-top: 20px;
+  margin-bottom: 25px;
+}
+.location-title {
+  margin: 0;
+
+  @include font($proximaNovaFontFamily, $h2FontSize, 400);
+  text-transform: uppercase;
+  margin-bottom: 50px;
+}
+.contact-form {
+  @include flexColumn;
+  align-items: center;
+  @include font($ptSansFontFamily, rem(18px), 400);
+  font-style: italic;
+  color: $white;
+  &__button {
+    @include font($proximaNovaFontFamily, rem(20px), 400);
+    text-transform: uppercase;
+    color: $white;
+    padding: 20px 80px;
+    background-color: $teamMemberColor;
+    border-radius: 5px;
+    box-shadow: 0px 5px 2px 0px rgba(96, 95, 112, 0.94);
+    margin-bottom: 30px;
+    &:focus {
+      @include font($proximaNovaFontFamily, rem(20px), 400);
+      text-transform: uppercase;
+      color: $white;
+      padding: 20px 80px;
+      background-color: $teamMemberColor;
+      border-radius: 5px;
+      box-shadow: 0px 5px 2px 0px rgba(96, 95, 112, 0.94);
+      margin-bottom: 30px;
+    }
+  }
+}
+.contact-form input {
+  padding: 20px 25px;
+  background-color: lightgrey;
+  border-radius: 5px;
+  width: 300px;
+  margin-bottom: 30px;
+}
+.contact-form input:focus {
+  @include font($ptSansFontFamily, rem(18px), 400);
+  font-style: italic;
+  color: $white;
+}
+.contact-form input::placeholder {
+  @include font($ptSansFontFamily, rem(18px), 400);
+  font-style: italic;
+  color: $white;
+}
+.contact-form textarea {
+  padding: 20px 25px;
+  background-color: lightgrey;
+  border-radius: 5px;
+  width: 300px;
+  margin-bottom: 30px;
+}
+.contact-form textarea:focus {
+  @include font($ptSansFontFamily, rem(18px), 400);
+  font-style: italic;
+  color: $white;
+}
+.contact-form textarea::placeholder {
+  @include font($ptSansFontFamily, rem(18px), 400);
+  font-style: italic;
+  color: $white;
 }
