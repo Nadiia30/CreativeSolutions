@@ -81,3 +81,27 @@ $(function () {
   };
   const sl = $(".team-slider").slick(config);
 });
+
+let map;
+const cnt = { lat: 46.478766, lng: 30.723594 };
+
+function initMap() {
+  map = new google.maps.Map(document.getElementById("map"), {
+    center: cnt,
+    zoom: 16,
+  });
+
+  const marker = new google.maps.Marker({
+    position: cnt,
+    map,
+    title: "Malang, East Java, Indonesia",
+    icon: "i/Pin.png",
+  });
+
+  const infowindow = new google.maps.InfoWindow({
+    content: "Creative Digital Progect",
+  });
+  marker.addListener("click", function () {
+    infowindow.open(map, marker);
+  });
+}
