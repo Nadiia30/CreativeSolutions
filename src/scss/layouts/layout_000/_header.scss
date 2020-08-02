@@ -1,0 +1,182 @@
+html {
+  font-size: $baseFontSize;
+}
+
+body {
+  @include flexColumn;
+  min-height: 100vh;
+}
+
+.fluid-container {
+  &_header {
+    background: url(#{$imgPath}bg-header.jpg) no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+  }
+  &_about {
+    background: $mainBgColor;
+    padding-top: 20px;
+  }
+  &_works {
+    background: url(#{$imgPath}bg-works.jpg) no-repeat;
+    background-size: cover;
+  }
+  &_team {
+    background: $mainBgColor;
+  }
+  &_footer {
+    background: $teamMemberColor;
+    text-align: center;
+  }
+}
+
+/** ------------------
+   * Navbar.
+   * ------------------------------------------------------- */
+.navbar {
+  @include flexRow;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar a {
+  text-decoration: none;
+  color: $white;
+  transition: color 200ms ease-in;
+}
+
+.logo img {
+  display: block;
+  max-height: 3.5rem;
+}
+
+.menu {
+  display: none;
+}
+
+/** -------------------------------------------------------------
+   * Menu button.
+   * --------------------------------------------------------- */
+
+.menu-button {
+  display: inline-block;
+  transition: 0.3s ease-in-out;
+  width: 35px;
+  height: 24px;
+  position: relative;
+}
+
+.menu-button.in-overlay {
+  position: absolute;
+  top: 4rem;
+  right: 4rem;
+}
+
+.menu-button span {
+  position: absolute;
+  height: 4px;
+  border-radius: 10px;
+  width: 100%;
+  background-color: $white;
+  top: 0;
+  transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
+}
+
+.menu-button.active span {
+  background-color: $white;
+}
+
+.menu-button span:nth-child(1) {
+  top: 0;
+}
+
+.menu-button span:nth-child(2),
+.menu-button span:nth-child(3) {
+  top: 10px;
+}
+
+.menu-button span:nth-child(4) {
+  top: 20px;
+}
+
+.menu-button.active span:nth-child(1),
+.menu-button.active span:nth-child(4) {
+  opacity: 0;
+}
+
+.menu-button.active span:nth-child(2) {
+  transform: rotate(45deg);
+}
+
+.menu-button.active span:nth-child(3) {
+  transform: rotate(-45deg);
+}
+
+/** ---------------------------------------------------------
+   * Mobile menu
+   * --------------------------------------------------------- */
+/* Overlay navigation. */
+.overlay-navigation {
+  @include flexRow;
+  background-color: $mobileMenuOverlay;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s, height 0.3s;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay-navigation.visible {
+  opacity: 1;
+  visibility: visible;
+  height: 100%;
+}
+
+.menu-mobile {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  overflow: auto;
+}
+
+.menu-mobile__link {
+  color: $white;
+  display: block;
+  padding: 0.75rem 0;
+  text-decoration: none;
+  @include font($proximaNovaFontFamily, 1.2rem, 700);
+  text-transform: uppercase;
+}
+
+.container {
+  padding: $mobilePadding;
+  &_works {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: center;
+  }
+  &_team {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: center;
+  }
+}
+.header-content {
+  color: $white;
+  text-align: center;
+  &__title {
+    margin: 90px 0;
+    @include font($proximaNovaFontFamily, 40px, 700);
+    text-transform: uppercase;
+  }
+  &__description {
+    margin: 0;
+    @include font($ptSansFontFamily, 1rem, 400);
+    font-style: italic;
+  }
+}
