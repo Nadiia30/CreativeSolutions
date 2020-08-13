@@ -105,3 +105,46 @@ function initMap() {
     infowindow.open(map, marker);
   });
 }
+
+const navLinks = document.querySelectorAll(".nav__link");
+
+var scroll = new SmoothScroll('a[href*="#"]', {
+  speed: 1000,
+  header: "[data-scroll-header]",
+});
+
+document.addEventListener("scrollStop", handleScroll);
+
+function handleScroll(e) {
+  const targetEl = e.detail.anchor;
+  const link = e.detail.toggle;
+  navLinks.forEach((item) => item.classList.remove("active"));
+
+  link.classList.add("active");
+  const el = targetEl.firstElementChild;
+  el.classList.add("pulse");
+  setTimeout(() => {
+    el.classList.remove("pulse");
+  }, 4000);
+}
+
+let interval;
+function step() {
+  window.scrollBy(0, -15);
+  const st = window.pageYOffset;
+  if (st > 0) {
+    interval = requestAnimationFrame(step);
+    return;
+  }
+  cancelAnimationFrame(interval);
+}
+
+document.addEventListener("click", function (e) {
+  const target = e.target.closest("#scroll-top");
+
+  if (target) {
+    interval = requestAnimationFrame(step);
+  } else {
+    cancelAnimationFrame(interval);
+  }
+});

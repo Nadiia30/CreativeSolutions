@@ -14,27 +14,27 @@
           <a href="index.html" class="logo"
             ><img src="i/logo.png" alt="Beetroot"
           /></a>
-
-          <nav class="menu">
-            <ul class="menu-desktop">
-              <li class="menu-desktop__item">
-                <a class="menu-desktop__link" href="#">Home</a>
-              </li>
-              <li class="menu-desktop__item">
-                <a class="menu-desktop__link" href="#">About</a>
-              </li>
-              <li class="menu-desktop__item">
-                <a class="menu-desktop__link" href="#">Services</a>
-              </li>
-              <li class="menu-desktop__item">
-                <a class="menu-desktop__link" href="#">Works</a>
-              </li>
-              <li class="menu-desktop__item">
-                <a class="menu-desktop__link" href="#">Contact</a>
-              </li>
-            </ul>
-          </nav>
-
+          <div class="scroll-header" data-scroll-header>
+            <nav class="menu">
+              <ul class="menu-desktop">
+                <li class="menu-desktop__item">
+                  <a class="menu-desktop__link" href="#home">Home</a>
+                </li>
+                <li class="menu-desktop__item">
+                  <a class="menu-desktop__link" href="#about">About</a>
+                </li>
+                <li class="menu-desktop__item">
+                  <a class="menu-desktop__link" href="#services">Services</a>
+                </li>
+                <li class="menu-desktop__item">
+                  <a class="menu-desktop__link" href="#works">Works</a>
+                </li>
+                <li class="menu-desktop__item">
+                  <a class="menu-desktop__link" href="#contact">Contact</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
           <a href="#" class="menu-button">
             <span></span>
             <span></span>
@@ -82,83 +82,90 @@
         </article>
       </div>
     </div>
-    <div class="fluid-container fluid-container_about">
-      <div class="about-left">
-        <img class="about-icon" src="i/about.svg" />
-        <h2 class="about-title">About us</h2>
-      </div>
-      <div class="about-right">
-        <div class="container">
-          <p class="about-text">
-            Lorem ipsum dolor sit, amet
-            <span class="bold">consectetur adipisicing</span> elit. Quis tempore
-            fuga voluptatem rem ullam non dicta alias velit impedit. Fugit.
-          </p>
-          <p class="about-text">
-            <span class="bold">Lorem ipsum dolor</span> sit amet, consectetur
-            adipisicing elit. Natus est sit assumenda sequi facere! Eligendi
-            adipisci, eos rem amet ipsum fugit. Fuga facere minima alias
-            <span class="italic">consectetur</span> voluptate, fugit ea hic!
-          </p>
-          <button class="button">Learn More</button>
+    <section id="about">
+      <div class="fluid-container fluid-container_about">
+        <div class="about-left">
+          <img class="about-icon" src="i/about.svg" />
+          <h2 class="about-title">About us</h2>
+        </div>
+        <div class="about-right">
+          <div class="container">
+            <p class="about-text">
+              Lorem ipsum dolor sit, amet
+              <span class="bold">consectetur adipisicing</span> elit. Quis
+              tempore fuga voluptatem rem ullam non dicta alias velit impedit.
+              Fugit.
+            </p>
+            <p class="about-text">
+              <span class="bold">Lorem ipsum dolor</span> sit amet, consectetur
+              adipisicing elit. Natus est sit assumenda sequi facere! Eligendi
+              adipisci, eos rem amet ipsum fugit. Fuga facere minima alias
+              <span class="italic">consectetur</span> voluptate, fugit ea hic!
+            </p>
+            <button class="button">Learn More</button>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="service-box">
-      <section class="our-services">
-        <img class="our-services__img" src="i/Icon-Services.png" />
-        <h2 class="our-services__title">Our services</h2>
-        <p class="cite">
-          &quot;Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Placeat, officia?&quot;
-        </p>
-        <p class="author">&ndash; Borat &ndash;</p>
-      </section>
-      <section class="box-item">
-        <img class="box-item__img" src="i/Icon-Graphic.png" />
-        <h3 class="box-item__title">Graphic design</h3>
-        <p class="box-item__text">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-        </p>
-      </section>
-      <section class="box-item">
-        <img class="box-item__img" src="i/Icon-Web.png" />
-        <h3 class="box-item__title">Web development</h3>
-        <p class="box-item__text">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-        </p>
-      </section>
-      <section class="box-item">
-        <img class="box-item__img" src="i/Icon-SEO.png" />
-        <h3 class="box-item__title">Seo&amp;marketing</h3>
-        <p class="box-item__text">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-        </p>
-      </section>
-      <section class="box-item">
-        <img class="box-item__img" src="i/Icon-Mobile.png" />
-        <h3 class="box-item__title">Mobile development</h3>
-        <p class="box-item__text">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-        </p>
-      </section>
-    </div>
-    <div class="fluid-container fluid-container_works">
-      <div class="container container_works">
-        <img class="works-img" src="i/Icon-Works.png" />
-        <h2 class="works-title">
-          Recent works
-        </h2>
-        <div class="works-slider">
-          <img src="i/slider-img.jpg" class="slider-img" />
-          <img src="i/slider-img2.jpg" class="slider-img" />
-          <img src="i/slider-img3.jpg" class="slider-img" />
-          <img src="i/slider-img4.jpg" class="slider-img" />
-        </div>
-        <div class="container container_dots"></div>
-        <button class="button button_works">View gallery</button>
+    </section>
+    <section id="services">
+      <div class="service-box">
+        <section class="our-services">
+          <img class="our-services__img" src="i/Icon-Services.png" />
+          <h2 class="our-services__title">Our services</h2>
+          <p class="cite">
+            &quot;Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Placeat, officia?&quot;
+          </p>
+          <p class="author">&ndash; Borat &ndash;</p>
+        </section>
+        <section class="box-item">
+          <img class="box-item__img" src="i/Icon-Graphic.png" />
+          <h3 class="box-item__title">Graphic design</h3>
+          <p class="box-item__text">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          </p>
+        </section>
+        <section class="box-item">
+          <img class="box-item__img" src="i/Icon-Web.png" />
+          <h3 class="box-item__title">Web development</h3>
+          <p class="box-item__text">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          </p>
+        </section>
+        <section class="box-item">
+          <img class="box-item__img" src="i/Icon-SEO.png" />
+          <h3 class="box-item__title">Seo&amp;marketing</h3>
+          <p class="box-item__text">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          </p>
+        </section>
+        <section class="box-item">
+          <img class="box-item__img" src="i/Icon-Mobile.png" />
+          <h3 class="box-item__title">Mobile development</h3>
+          <p class="box-item__text">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          </p>
+        </section>
       </div>
-    </div>
+    </section>
+    <section id="works">
+      <div class="fluid-container fluid-container_works">
+        <div class="container container_works">
+          <img class="works-img" src="i/Icon-Works.png" />
+          <h2 class="works-title">
+            Recent works
+          </h2>
+          <div class="works-slider">
+            <img src="i/slider-img.jpg" class="slider-img" />
+            <img src="i/slider-img2.jpg" class="slider-img" />
+            <img src="i/slider-img3.jpg" class="slider-img" />
+            <img src="i/slider-img4.jpg" class="slider-img" />
+          </div>
+          <div class="container container_dots"></div>
+          <button class="button button_works">View gallery</button>
+        </div>
+      </div>
+    </section>
     <div class="fluid-container fluid-container_team">
       <div class="container container_team">
         <img src="i/Icon-Team.png" class="team-icon" />
@@ -242,43 +249,43 @@
         </div>
       </div>
     </div>
-
-    <div class="location">
-      <img class="location-icon" src="i/location-icon.png" />
-      <h2 class="location-title">Get in touch</h2>
-      <form class="contact-form">
-        <input
-          class="contact-form__name"
-          name="name"
-          type="text"
-          placeholder="Your Name&#42;"
-        />
-        <input
-          class="contact-form__email"
-          name="email"
-          type="email"
-          placeholder="Your Email&#42;"
-        />
-        <textarea
-          class="contact-form__additionally"
-          name="additionally"
-          placeholder="Your Message&#42;"
-        ></textarea>
-        <button class="contact-form__button">Send message</button>
-      </form>
-      <div id="map" class="map"></div>
-      <div class="address-box">
-        <img class="address-icon" src="i/Icon-Address.png" />
-        <p class="address-text">
-          Ikan Piranha Atas 220C Malang - East Java Indonesia
-        </p>
+    <section id="contact">
+      <div class="location">
+        <img class="location-icon" src="i/location-icon.png" />
+        <h2 class="location-title">Get in touch</h2>
+        <form class="contact-form">
+          <input
+            class="contact-form__name"
+            name="name"
+            type="text"
+            placeholder="Your Name&#42;"
+          />
+          <input
+            class="contact-form__email"
+            name="email"
+            type="email"
+            placeholder="Your Email&#42;"
+          />
+          <textarea
+            class="contact-form__additionally"
+            name="additionally"
+            placeholder="Your Message&#42;"
+          ></textarea>
+          <button class="contact-form__button">Send message</button>
+        </form>
+        <div id="map" class="map"></div>
+        <div class="address-box">
+          <img class="address-icon" src="i/Icon-Address.png" />
+          <p class="address-text">
+            Ikan Piranha Atas 220C Malang - East Java Indonesia
+          </p>
+        </div>
+        <div class="phone-box">
+          <img class="phone-icon" src="i/Icon-phone.png" />
+          <p class="phone-number">+6281235966914</p>
+        </div>
       </div>
-      <div class="phone-box">
-        <img class="phone-icon" src="i/Icon-phone.png" />
-        <p class="phone-number">+6281235966914</p>
-      </div>
-    </div>
-
+    </section>
     <footer class="fluid-container fluid-container_footer">
       <div class="container">
         <p class="footer-text">
@@ -302,7 +309,9 @@
           </svg>
         </div>
       </div>
+      <div id="scroll-top"></div>
     </footer>
+
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
       integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
@@ -313,7 +322,7 @@
       async
       defer
     ></script>
-
+    <script src="js/smooth-scroll.min.js"></script>
     <script src="js/script.js"></script>
   </body>
 </html>

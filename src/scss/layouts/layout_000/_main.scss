@@ -229,7 +229,7 @@
 
 .map {
   width: 100%;
-  height: 595px;
+  height: 750px;
   position: absolute;
   top: 0;
   left: 0;
@@ -270,7 +270,7 @@
     background-color: $teamMemberColor;
     border-radius: 5px;
     box-shadow: 0px 5px 2px 0px rgba(96, 95, 112, 0.94);
-    margin-bottom: 30px;
+    margin-bottom: 170px;
     &:focus {
       @include font($proximaNovaFontFamily, rem(20px), 400);
       text-transform: uppercase;
@@ -371,4 +371,27 @@
 }
 .phone-box:hover .phone-number {
   display: block;
+}
+
+#scroll-top {
+  z-index: 2;
+  position: fixed;
+  bottom: 12px;
+  right: 10px;
+  width: 40px;
+  height: 40px;
+  background-color: $mainBgColor;
+  border: 1px solid $teamMemberColor;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+#scroll-top::before {
+  content: "\003e";
+  color: $teamMemberColor;
+  font-size: 30px;
+  font-weight: bold;
+  display: block;
+  transform: rotate(-90deg);
 }
