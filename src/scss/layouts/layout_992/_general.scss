@@ -2,6 +2,19 @@
  * Desktop menu.
  * ------------------------------------------------------- */
 
+.fluid-container {
+  &_header {
+    height: 1070px;
+  }
+  &_about {
+    padding: 100px;
+  }
+  &_works {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+}
+
 .navbar li:hover > a {
   color: $menuLinkHover;
   text-decoration: underline;
@@ -33,6 +46,42 @@
 }
 .overlay-navigation {
   display: none;
+}
+
+.header-content {
+  color: $white;
+  text-align: center;
+  &__title {
+    margin-top: 300px;
+    font-size: $h1FontSize;
+  }
+  &__description {
+    font-size: $h3FontSize;
+  }
+}
+
+.about-left {
+  margin-right: 100px;
+  height: 558px;
+  width: 380px;
+}
+.service-box {
+  padding-left: 100px;
+  padding-right: 100px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+.our-services {
+  grid-column: 3;
+  grid-row: 1 / span 2;
+  height: 100%;
+}
+#services {
+  background-color: $mainBgColor;
+}
+
+.team-slider {
+  max-width: 1100px;
 }
 
 .address-box {
@@ -86,8 +135,4 @@
 }
 .phone-box:hover .phone-number {
   display: block;
-}
-
-.team-slider {
-  max-width: 1100px;
 }

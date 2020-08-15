@@ -147,7 +147,25 @@
 .container_dots .slick-active {
   background: $textLightColor;
 }
+.workarrow {
+  position: absolute;
+  top: 50%;
+  width: 22px;
+  height: 38px;
+  z-index: 10;
+  transition: all 1s ease-in;
+  background: url(#{$imgPath}workarrow-left.png) no-repeat;
+  cursor: pointer;
+  text-indent: -9999px;
+}
 
+.workarrow_prev {
+  left: 0;
+}
+.workarrow_next {
+  right: 0px;
+  transform: rotate(180deg);
+}
 //====== team ======
 
 .team-icon {
