@@ -167,7 +167,9 @@
   transform: rotate(180deg);
 }
 //====== team ======
-
+.team-slider {
+  margin: auto;
+}
 .team-icon {
   margin-bottom: 35px;
 }
@@ -179,7 +181,6 @@
 }
 
 .member {
-  position: relative;
   text-align: center;
   margin-top: 140px;
 
@@ -192,9 +193,11 @@
     width: 220px;
   }
   &__info {
+    position: relative;
     width: 290px;
     padding-top: 150px;
     background: $white;
+    margin: auto;
   }
   &__name {
     margin: 0;
@@ -212,6 +215,7 @@
   }
 }
 .social-box {
+  margin: auto;
   width: 290px;
   background: $teamMemberColor;
   padding: 15px;
@@ -247,7 +251,7 @@
 
 .map {
   width: 100%;
-  height: 750px;
+  height: 920px;
   position: absolute;
   top: 0;
   left: 0;
@@ -264,12 +268,12 @@
   text-align: center;
 }
 .location-icon {
-  padding-top: 20px;
+  padding-top: 170px;
   margin-bottom: 25px;
 }
 .location-title {
-  margin: 0;
   color: $white;
+  margin: 0;
   @include font($proximaNovaFontFamily, $h2FontSize, 400);
   text-transform: uppercase;
   margin-bottom: 50px;
@@ -288,7 +292,7 @@
     background-color: $teamMemberColor;
     border-radius: 5px;
     box-shadow: 0px 5px 2px 0px rgba(96, 95, 112, 0.94);
-    margin-bottom: 170px;
+    margin-bottom: 207px;
     &:focus {
       @include font($proximaNovaFontFamily, rem(20px), 400);
       text-transform: uppercase;

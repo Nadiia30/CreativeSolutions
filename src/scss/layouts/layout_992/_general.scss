@@ -81,7 +81,7 @@
 }
 
 .team-slider {
-  max-width: 1100px;
+  max-width: 1300px;
 }
 
 .address-box {
@@ -135,4 +135,9 @@
 }
 .phone-box:hover .phone-number {
   display: block;
+}
+
+.container_footer {
+  display: flex;
+  justify-content: space-around;
 }

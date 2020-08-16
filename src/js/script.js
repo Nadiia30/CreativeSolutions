@@ -67,13 +67,13 @@ $(function () {
     mobileFirst: true,
     responsive: [
       {
-        breakpoint: 610,
+        breakpoint: 768,
         settings: {
           slidesToShow: 2,
         },
       },
       {
-        breakpoint: 910,
+        breakpoint: 992,
         settings: {
           slidesToShow: 3,
           slidesToScroll: 2,
